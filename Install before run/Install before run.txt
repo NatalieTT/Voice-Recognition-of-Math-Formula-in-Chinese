@@ -1,0 +1,11 @@
+os
+base64
+hashlib
+hmac
+json
+time
+requests
+cn2an
+pypinyin
+IPython
+PyAudio（Attached in this directory）
