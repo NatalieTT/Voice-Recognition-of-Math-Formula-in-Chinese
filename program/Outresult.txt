@@ -1,0 +1,1 @@
+{'data': '[{"bg":"480","ed":"4330","onebest":" Y等于x+3。","speaker":"0"}]', 'err_no': 0, 'failed': None, 'ok': 0}

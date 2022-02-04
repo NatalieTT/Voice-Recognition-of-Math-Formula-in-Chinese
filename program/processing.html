@@ -1,0 +1,62 @@
+﻿<!-- Yichun TAO
+    UIC FYP
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>处理中</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+	<script>
+		function getRealPath(){   
+			var path = location.pathname;  
+			path = path.substring(0,path.length-15);
+			path = path.slice(1);
+			document.getElementById("demo").innerHTML = path;
+			path = path.substring(0,path.length-8);
+			var newpath = path + "/FirstPage.html";
+			window.location.href= newpath;
+			}
+	</script>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+        </div>
+    </div>
+    <!-- <div class="menu"> -->
+        <!-- 预留菜单位置 -->
+    <!-- </div> -->
+    <center>
+        <div class="main clearfix">
+            <!-- <div class="main-center fleft"> -->
+                <div class="box center-top-bg">
+                        <div class="content" style="top:50%;left:50%;font-size: 50px; height: 360px; overflow: hidden; padding:0 13px; color:white;">
+                            <br><br>
+                            <center>正在处理中，请稍候（需要一分钟左右）</center>
+							<center><button style="border: none;
+                            background-color: #7676d6;
+                            font-weight: 700;
+                            border-radius: 4px;
+                            color: white;
+                            padding: 15px 32px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 16px;" onclick="getRealPath()">重新录音</button></center>
+                            <br>
+                        </div>
+
+            </div>
+        <!-- </div> -->
+        </center>
+
+    <!-- JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/world.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
