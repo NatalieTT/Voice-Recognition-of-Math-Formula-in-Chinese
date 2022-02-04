@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- Yichun TAO -->
+<html>
+    <head>
+        <title>Chinese Formula</title>
+        <meta charset="utf-8">  
+	    <script language="javascript">  
+            var myVar;   
+	        function exec1(command) 
+	        {     
+	            var ws = new ActiveXObject("WScript.Shell");      
+                ws.run(command);
+                //window.location.href="Recording.html"
+                myVar = setTimeout(alertFunc, 2000);
+               
+	        }  
+            function alertFunc() {
+                window.location.href="program/Recording.html";
+            } 
+			function getRealPath(){   
+				var path = location.pathname;  
+				path = path.substring(0,path.length-15);
+				path = path.slice(1);
+				document.getElementById("demo").innerHTML = path;
+				var newpath = "python -i " + path + "/program/callaudio.py";
+				exec1(newpath);
+			}
+
+        </script>
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="program/css/base.css">
+        <link rel="stylesheet" href="program/css/main.css">   
+    </head>
+    <body>
+		<p id = "demo"></p>
+        <div class="main clearfix">
+        </div>
+        <div class="header">
+            <div class="title">
+                <!-- 销售大数据分析 -->
+            </div>
+        </div>
+        <!-- <div class="menu"> -->
+            <!-- 预留菜单位置 -->
+        <!-- </div> -->
+        <center>
+        <div class="main clearfix">
+            <!-- <div class="main-center fleft"> -->
+                <div class="box center-top-bg">
+                        <div class="content" style="top:50%;left:50%;font-size: 30px; height: 360px; overflow: hidden; padding:0 13px; color:white;">
+                            <br><br>
+                            <center>欢迎来到中文公式语音输入系统，如需开始，请点击“开始录音”按钮</center>
+                            <br>
+                        </div>
+                        <center><button style="border: none;
+                            background-color: #7676d6;
+                            font-weight: 700;
+                            border-radius: 4px;
+                            color: white;
+                            padding: 15px 32px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 16px;" onclick="getRealPath()">开始录音</button></center>
+
+            </div>
+        <!-- </div> -->
+        </center>
+    
+        <!-- JS -->
+        <script src="program/js/jquery.min.js"></script>
+        <script src="program/js/echarts.min.js"></script>
+        <script src="program/js/world.js"></script>
+        <script src="program/js/main.js"></script>
+    </body>
+</html>
